@@ -95,11 +95,9 @@ Authorization: Bearer your_jwt_token
 ### Clone Repository
 
 ```bash
-git clone <your-github-link>
+git clone <(https://github.com/Nadeem-225/Order-Management-System)>
 cd Order-Management-System
 ```
-
-> Replace `<your-github-link>` later after uploading to GitHub.
 
 ### Create Virtual Environment
 
