@@ -189,16 +189,14 @@ Priority Order:
 
 ---
 
+
 ## Screenshots
 
-### Swagger Documentation
+### Home Screen
+![Home Screen](Screenshots/Home_Screen.jpeg)
 
-![Swagger Home](screenshots/Home_Screen.jpeg)
-
-### Create Order API
-
-![Create Order](screenshots/Create-Orders.jpeg)
-
+### Create Orders
+![Create Orders](Screenshots/Create_Orders.jpeg)
 ### Authentication
 
 | Method | Endpoint | Description |
