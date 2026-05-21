@@ -60,6 +60,147 @@ Order-Management-System/
 
 ### Authentication
 
+#### Register User
+
+**POST** `/api/v1/register`
+
+Request Body:
+
+```json
+{
+  "username": "Enter the username",
+  "password": "Enter the password",
+  "role": "admin"
+}
+```
+
+---
+
+#### Login
+
+**POST** `/api/v1/login`
+
+Request Body:
+
+```json
+{
+  "username": "Enter the Username",
+  "password": "Enter the Password"
+}
+```
+
+Response:
+
+```json
+{
+  "success": true,
+  "access_token": "your_jwt_token",
+  "role": "admin"
+}
+```
+
+---
+
+### Orders
+
+#### Create Order
+
+**POST** `/api/v1/orders`
+
+Request Body:
+
+```json
+{
+  "customer_name": "Nadeem",
+  "product": "MacBook",
+  "quantity": 2,
+  "priority": "HIGH"
+}
+```
+
+---
+
+#### Get All Orders
+
+**GET** `/api/v1/orders`
+
+Supports:
+
+- Filtering by customer name
+- Filtering by product
+- Pagination
+- Sorting (`asc` / `desc`)
+
+Example:
+
+```text
+/api/v1/orders?page=1&limit=5
+```
+
+---
+
+#### Get Order by ID
+
+**GET** `/api/v1/orders/<id>`
+
+Example:
+
+```text
+/api/v1/orders/1
+```
+
+---
+
+#### Update Order
+
+**PUT** `/api/v1/orders/<id>`
+
+Example:
+
+```text
+/api/v1/orders/1
+```
+
+---
+
+#### Delete Order
+
+**DELETE** `/api/v1/orders/<id>`
+
+Example:
+
+```text
+/api/v1/orders/1
+```
+
+---
+
+#### Process Orders by Priority
+
+**GET** `/api/v1/orders/process`
+
+Processes orders using queue/heap-based priority scheduling:
+
+Priority Order:
+
+1. HIGH
+2. MEDIUM
+3. LOW
+
+---
+
+## Screenshots
+
+### Swagger Documentation
+
+![Swagger Home](screenshots/Home_Screen.jpeg)
+
+### Create Order API
+
+![Create Order](screenshots/Create-Orders.jpeg)
+
+### Authentication
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | `/register` | Register a user |
@@ -98,6 +239,7 @@ Authorization: Bearer your_jwt_token
 git clone <(https://github.com/Nadeem-225/Order-Management-System)>
 cd Order-Management-System
 ```
+
 
 ### Create Virtual Environment
 
